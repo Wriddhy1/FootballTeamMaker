@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="586.0" prefWidth="635.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.footballteammaker.TeamMakerSceneController">
+   <children>
+      <TextField fx:id="nameTextField" layoutX="104.0" layoutY="43.0" />
+      <Label layoutX="11.0" layoutY="47.0" prefHeight="17.0" prefWidth="67.0" text="Name" />
+      <Label layoutX="11.0" layoutY="87.0" prefHeight="17.0" prefWidth="84.0" text="Phone Number" />
+      <Label layoutX="11.0" layoutY="128.0" prefHeight="17.0" prefWidth="67.0" text="University" />
+      <Label layoutX="11.0" layoutY="170.0" prefHeight="17.0" prefWidth="67.0" text="Tag" />
+      <TextField fx:id="phonenumberTextField" layoutX="104.0" layoutY="83.0" />
+      <ComboBox fx:id="universityComboBox" layoutX="104.0" layoutY="124.0" onAction="#universityComboBoxOnAction" prefWidth="150.0" />
+      <Label fx:id="labelTextField" layoutX="110.0" layoutY="165.0" prefHeight="26.0" prefWidth="107.0" text="Label" />
+      <RadioButton fx:id="maleRadioButton" layoutX="87.0" layoutY="215.0" mnemonicParsing="false" text="male">
+         <toggleGroup>
+            <ToggleGroup fx:id="selected" />
+         </toggleGroup>
+      </RadioButton>
+      <Label layoutX="11.0" layoutY="215.0" prefHeight="17.0" prefWidth="67.0" text="Gender" />
+      <RadioButton fx:id="femaleRadioButton" layoutX="164.0" layoutY="215.0" mnemonicParsing="false" text="female" toggleGroup="$selected" />
+      <TableView fx:id="tableView" layoutX="1.0" layoutY="307.0" prefHeight="274.0" prefWidth="626.0">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="145.0" text="Name" />
+          <TableColumn fx:id="phonenumberCol" prefWidth="147.0" text="Phone number" />
+            <TableColumn fx:id="universityCol" prefWidth="131.0" text="University" />
+            <TableColumn fx:id="tagCol" prefWidth="107.0" text="Tag" />
+            <TableColumn fx:id="genderCol" prefWidth="95.0" text="Gender" />
+        </columns>
+      </TableView>
+      <Button layoutX="124.0" layoutY="257.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="26.0" prefWidth="142.0" text="Save" />
+      <Button layoutX="458.0" layoutY="124.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="26.0" prefWidth="142.0" text="Search" />
+      <ComboBox fx:id="searchComboBox" layoutX="454.0" layoutY="51.0" prefWidth="150.0" />
+      <Label layoutX="369.0" layoutY="45.0" prefHeight="48.0" prefWidth="67.0" text="Search by university" wrapText="true" />
+      <RadioButton fx:id="maleSearchRadioButton" layoutX="454.0" layoutY="95.0" mnemonicParsing="false" text="male" toggleGroup="$selected" />
+      <RadioButton fx:id="femaleSearchRadioButton" layoutX="521.0" layoutY="95.0" mnemonicParsing="false" text="female" toggleGroup="$selected" />
+   </children>
+</AnchorPane>
